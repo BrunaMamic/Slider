@@ -1,0 +1,250 @@
+.box1,
+.box2,
+.box3 {
+  height: 100px;
+  background: #ddd;
+}
+.box2,
+.img-arrow-container,
+.set-wrapper,
+.slider,
+.txt {
+  display: flex;
+}
+.img-container,
+.img-container-down-hidden {
+  overflow: hidden;
+}
+.box3,
+.container,
+.content-container,
+.footer,
+.header {
+  width: 941px;
+  display: flex;
+}
+.box1,
+.box2 {
+  border-radius: 0 0 5px 5px;
+}
+.txt-box,
+.txt-box-footer {
+  font-family: helvetica;
+  font-size: 15px;
+  line-height: 18px;
+  color: #fff;
+}
+.next .button,
+.prev .button {
+  cursor: pointer;
+  height: 60px;
+  padding: 22px 25px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+body {
+  margin: 0;
+}
+.container {
+  flex-direction: column;
+}
+.content-container {
+  flex-direction: row;
+}
+.box2,
+.box3 {
+  align-items: center;
+}
+.header {
+  margin-bottom: 60px;
+}
+.box1 {
+  width: 301px;
+  margin-right: 19px;
+}
+.box2 {
+  width: 621px;
+}
+.txt-box {
+  margin-left: 79px;
+}
+.txt-box-footer {
+  margin-left: 80px;
+}
+.title,
+.txt {
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: -0.2px;
+}
+.footer {
+  margin-top: 60px;
+}
+.box3 {
+  border-radius: 5px 5px 0 0;
+}
+.gallery__img_down,
+.gallery__img_up {
+  height: 200px;
+  border-radius: 5%;
+  left: 0;
+}
+.txt-container {
+  margin-left: 19px;
+  width: 301px;
+  height: 296px;
+}
+.title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #134880;
+}
+.txt {
+  font-size: 18px;
+  line-height: 26px;
+  align-items: center;
+  margin-top: 20px;
+  color: #484a4c;
+}
+.img-container {
+  height: 410px;
+  width: 619px;
+  flex-wrap: nowrap;
+  position: relative;
+  flex-direction: row;
+  margin-left: 0;
+}
+.img-container1 {
+  margin-bottom: 10px;
+  width: 619px;
+  height: 200px;
+}
+.img-container2 {
+  width: 459px;
+  height: 200px;
+}
+.slider {
+  justify-content: end;
+  transition: transform 1s;
+}
+.slider-down {
+  flex-direction: row-reverse;
+}
+.gallery__item_down,
+.gallery__item_up {
+  margin-left: 10px;
+  border-radius: 5px;
+  height: 200px;
+  transition: transform 0.8s;
+}
+.arrow-container {
+  width: 60px;
+  height: 130px;
+  margin-left: 99px;
+}
+.prev .button:hover {
+  border: 1px solid #134880;
+  border-radius: 5px;
+  background-image: url("assets/arrow-blue-left.png");
+}
+.next .button:hover {
+  border: 1px solid #134880;
+  border-radius: 5px;
+  background-image: url("assets/arrow-blue-right.png");
+  background-repeat: no-repeat;
+  align-items: center;
+}
+.prev .button {
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-image: url("assets/arrow-gray-left.png");
+  margin-bottom: 10px;
+}
+.next .button {
+  width: 60px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background-image: url("assets/arrow-gray-right.png");
+}
+.prev-animation {
+  transform: translateX(1830px);
+  animation: 9s infinite forwards moveToLeft;
+}
+.next-animation {
+  animation: 9s infinite forwards moveToRight;
+  opacity: 0.5;
+}
+.pause-next-animation,
+.pause-prev-animation {
+  animation-play-state: paused;
+}
+@keyframes moveToRight {
+  0% {
+    transform: translateX(0);
+    
+  }
+  11% {
+    transform: translateX(230px);
+  }
+  22% {
+    transform: translateX(420px);
+  }
+  33% {
+    transform: translateX(610px);
+  }
+  44% {
+    transform: translateX(740px);
+  }
+  55% {
+    transform: translateX(1010px);
+  }
+  66% {
+    transform: translateX(1240px);
+  }
+  77% {
+    transform: translateX(1430px);
+  }
+  88% {
+    transform: translateX(1560px);
+  }
+  100%,
+  99% {
+    transform: translateX(1830px);
+  }
+}
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(1830px);
+  }
+  11% {
+    transform: translateX(1560px);
+  }
+  22% {
+    transform: translateX(1430px);
+  }
+  33% {
+    transform: translateX(1240px);
+  }
+  44% {
+    transform: translateX(1010px);
+  }
+  55% {
+    transform: translateX(740px);
+  }
+  66% {
+    transform: translateX(610px);
+  }
+  77% {
+    transform: translateX(420px);
+  }
+  88% {
+    transform: translateX(230px);
+  }
+  100%,
+  99% {
+    transform: translateX(0);
+  }
+}
